@@ -1,34 +1,35 @@
 Instructions
 ----------
 
-This repository containes scripts used for the analysis in the article *The influence of Voluntary associations on fertility during the demographic transition 1880-1949*  
+This repository contains scripts used for the analysis in the article *Membership in and presence of voluntary organisations during the fertility transition, 1880-1949*. 
 
 ## Procedure
 
-The full analysis is reproducable autmatically from the source files by running the makefile
+The full analysis is reproducible automatically from the source files by running the makefile
 
     make all
 
 
 ## Source data
 
-None of the source files are included in this package, following is a brief description of the datasets used in the analysis. 
+None of the source files are included in this package; following is a brief description of the datasets used in the analysis. 
 
 From the `poplinkdata` package:
 
-`eh_data`: The main data is a event history dataset which is contructed from multiple files extracted from the Demographic database. The procedure used to create the event history dataset is documented in the data package.
+`eh_data`: The primary data is a event history dataset which is constructed from multiple files extracted from the Demographic database. The procedure used to create the event history dataset is documented in the data package.
 
-`person`: Containes static infromation on every individal in the sample.
+`person`: Contains static information on every individual in the sample.
 
-`children`: Containes information on each child born to the married population in the sample.
+`children`: Contains information on each child born to the married population in the sample.
 
 `voroni_spdf`: Spatial dataset of boundaries of neighbourhoods in the Skellefteå region.
 
 
 ## Scripts
 
+`spatial-partition.R`: Performs the spatial partitioning and produces Table 16 and Figure 11.
 
-`ehd_spells.R`: Tranforms the event history dataset to a episode file, suitable for analysis of fertility.
+`ehd_spells.R`: Transforms the event history dataset to a episode file, suitable for analysis of fertility.
 
 `coxme_exp_model.R`: Runs the regression models for exposure effects.
 
@@ -36,20 +37,22 @@ From the `poplinkdata` package:
 
 `pre-psm.R`: Prepares the event history dataset for PSM analysis.
 
-`matching.R`: Performs the PSM.
+`matching.R`: Performs the PSM and produce Table 10.
 
-`post-psm.R`: Runs analysis of fertility outcome on matched datasets.
+`post-psm.R`: Runs analysis of fertility outcome on matched datasets. Produces Table 4, 5 and 14, and Figure 9
 
-These scripts produce a number of regression model objects. The following scripts extracts the paramteres of interest and creates either csv files or results used for the tables in the articel or reproduces the Figures in the article.
+These scripts produce a number of regression model objects. The following scripts extract the parameters of interest and create either csv files or results used for the tables in the article or reproduce the Figures in the article.
 
-`format_coxme_pre.R`: Produces Table X. 
+`format_coxme_pre.R`: Produces Table 6 and 15. 
 
-`format_exp_model.R`: Produced Table X
+`format_exp_model.R`: Produces Table 2, 8 and 9.
 
-`vis_va_decade.R`: Produces Figure X
+`vis_va_decade.R`: Produces Figure 6.
 
-`distribution-matched.R`: Produces table X and figure X.
+`format_psm_reg.R`: Produces Table 10.
 
-`balance-mean.R`: Produces tables X, X and X.
+`distribution-matched.R`: Produces Table 3 and Figure 8.
+
+`balance-mean.R`: Produces Tables 11, 12 and 13.
 
 

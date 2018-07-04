@@ -3,6 +3,8 @@
 .RData
 .Ruserdata
 figures/*.png
+figures/*.jpg
 figures/*.pdf
 data/*.rda
+data/*.csv
 .cache/*.rda
