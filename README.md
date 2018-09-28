@@ -1,7 +1,7 @@
 Instructions
 ----------
 
-This repository contains scripts used for the analysis in the article *Membership in and presence of voluntary organisations during the fertility transition, 1880-1949*. 
+This repository contains scripts used for the analysis in the article Junkka, J. (2018). Membership in and Presence of Voluntary Organisations during the Swedish Fertility Transition, 1880-1949. *Historical Life Course Studies*, 5, 3-36. http://hdl.handle.net/10622/23526343-2018-00012?locatt=view:master.
 
 ## Procedure
 
